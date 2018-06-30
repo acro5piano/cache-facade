@@ -1,5 +1,4 @@
-/// import cache, { Driver } from 'cache-facade'
-import cache, { Driver } from '../src'
+import cache, { Driver } from 'cache-facade'
 
 cache.setDriver(Driver.localStorage)
 
