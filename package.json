@@ -6,6 +6,7 @@
   "author": "gosho-kazuya <ketsume0211@gmail.com>",
   "scripts": {
     "test": "jest",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
     "build": "tsc",
     "prepublish": "tsc"
   },
