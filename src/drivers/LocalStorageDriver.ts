@@ -4,10 +4,14 @@ export default class LocalStorageDriver implements DriverInterface {
   store: any = {}
 
   get(name: string) {
-    return JSON.stringify(localStorage.getItem(name))
+    const item = localStorage.getItem(name)
+    if (!item) {
+      return null
+    }
+    return JSON.parse(item)
   }
 
   set(name: string, value: string) {
-    return JSON.stringify(localStorage.setItem(name, value))
+    localStorage.setItem(name, JSON.stringify(value))
   }
 }
