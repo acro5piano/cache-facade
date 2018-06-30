@@ -1,8 +1,9 @@
 {
-  "name": "storage-cache",
+  "name": "cache-facade",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:acro5piano/storage-cache",
+  "private": false,
   "author": "gosho-kazuya <ketsume0211@gmail.com>",
   "scripts": {
     "test": "jest",

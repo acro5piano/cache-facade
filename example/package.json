@@ -1,0 +1,9 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "storage-cache": "git+https://github.com/acro5piano/storage-cache"
+  }
+}
