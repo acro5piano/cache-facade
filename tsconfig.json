@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "noLib": false,
+    "outDir": "dist/",
+    "noUnusedLocals": true,
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["dom", "es2015", "esnext.asynciterable"],
+    "baseUrl": "."
+  },
+  "paths": {
+    "storage-cache/*": ["./src/*"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "examples", "static", "tests"]
+}
