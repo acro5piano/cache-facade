@@ -14,4 +14,8 @@ export default class LocalStorageDriver implements DriverInterface {
   set(name: string, value: string) {
     localStorage.setItem(name, JSON.stringify(value))
   }
+
+  clear(name: string) {
+    localStorage.removeItem(name)
+  }
 }

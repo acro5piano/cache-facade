@@ -10,4 +10,8 @@ export default class MemoryDriver implements DriverInterface {
   set(name: string, value: any) {
     this.store[name] = value
   }
+
+  clear(name: string) {
+    delete this.store[name]
+  }
 }

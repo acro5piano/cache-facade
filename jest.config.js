@@ -1,9 +1,12 @@
 module.exports = {
+  globals: {
+    __TS_CONFIG__: 'tsconfig.json',
+  },
   // setupTestFrameworkScriptFile: "./src/test/setup.ts",
   transform: {
     '^.+\\.ts$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
   },
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
   testRegex: 'tests.*.(ts|tsx|js)$',
   testPathIgnorePatterns: ['node_modules', 'lib', 'dist'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],

@@ -16,7 +16,10 @@ yarn add cache-facade
 ```ts
 import cache from 'cache-facade'
 
-const countries = cache.remember('countries', 30, () => {
-  return countryApi.get()
-})
+async someAsyncFunction() {
+  const countries = await cache.remember('countries', 30, () => {
+    return countryApi.get()
+  })
+  console.log(countries)
+}
 ```

@@ -10,13 +10,14 @@ export enum Driver {
 class Cache {
   driver: DriverInterface = new LocalStorageDriver()
 
-  remember(name: string, minutes: number, alternate: () => any) {
+  async remember(name: string, minutes: number, alternate: () => any) {
     const saved = this.driver.get(name)
     if (saved) {
       return saved
     }
-    const res = alternate()
+    const res = await Promise.resolve(alternate())
     this.driver.set(name, res)
+    console.log(this.driver.get(name))
     return res
   }
 
@@ -29,6 +30,12 @@ class Cache {
         this.driver = new LocalStorageDriver()
         return
     }
+  }
+
+  clear() {
+    Object.keys(this.driver).forEach(key => {
+      this.driver.clear(key)
+    })
   }
 }
 
