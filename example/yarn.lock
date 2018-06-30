@@ -788,9 +788,9 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
-cache-facade@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/cache-facade/-/cache-facade-0.0.1.tgz#4409ffc8ec20005e74a0e268220759842c0468f0"
+cache-facade@latest:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/cache-facade/-/cache-facade-0.0.2.tgz#ad2e1b3791d90490f78dbcc87c20285485a155d1"
 
 caniuse-api@^1.5.2:
   version "1.6.1"
