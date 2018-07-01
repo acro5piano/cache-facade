@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cache-facade": "latest"
+    "cache-facade": "^0.0.5"
   },
   "devDependencies": {
     "parcel-bundler": "^1.9.3"
