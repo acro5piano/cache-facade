@@ -17,7 +17,6 @@ class Cache {
     }
     const res = await Promise.resolve(alternate())
     this.driver.set(name, res)
-    console.log(this.driver.get(name))
     return res
   }
 
