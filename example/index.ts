@@ -4,9 +4,13 @@ cache.setDriver(Driver.localStorage)
 
 const countries = ['US', 'UK', 'JP']
 
-const cachedCountries = cache.remember('countries', 30, () => countries)
+async function setCountries() {
+  const cachedCountries = await cache.remember('countries', 30, () => countries)
 
-const elm = document.getElementById('app')
-if (elm) {
-  elm.innerText = cachedCountries.join(', ')
+  const elm = document.getElementById('app')
+  if (elm) {
+    elm.innerText = cachedCountries.join(', ')
+  }
 }
+
+setCountries()
