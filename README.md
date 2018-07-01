@@ -3,7 +3,7 @@
 
 # Cache Facade
 
-Browser Cache inspired by Laravel's `cache::remember`
+Browser Cache inspired by Laravel's `cache::remember`. You can reduce API call with fluent syntax.
 
 # Installation
 
@@ -23,3 +23,29 @@ async someAsyncFunction() {
   console.log(countries)
 }
 ```
+
+In the above example, `cache.remember` will look for saved cache first. Then, if cache found then return it. Else the third function's result will be passed. If over 30 minutes passed since the cache saved, Cache Facade will run the third function and save it.
+
+# Syntax
+
+## cache.remember
+
+```ts
+cache.remember(keyName: string, expiredTimeInMinutes: number, otherwise: () => Promise<any>)
+```
+
+## cache.setDriver
+
+Set storage driver. Default is `localStorage`.
+
+```ts
+import cache, { Driver } from 'cache-facade'
+
+cache.setDriver(Driver.memory)
+cache.setDriver(Driver.localStorage)
+```
+
+# TODO
+
+- [ ] React Native support. Add `AsyncStorage` Driver.
+- [ ] Custom driver support.
