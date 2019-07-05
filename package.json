@@ -7,7 +7,6 @@
   "author": "gosho-kazuya <ketsume0211@gmail.com>",
   "scripts": {
     "test": "jest",
-    "lint": "tslint -c tslint.json -p tsconfig.json",
     "build": "tsc",
     "prepublish": "tsc"
   },
@@ -17,13 +16,7 @@
     "@types/node": "^10.3.2",
     "jest": "^23.1.0",
     "prettier": "^1.13.7",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
     "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "tslint-config-standard": "^7.0.0",
-    "tslint-eslint-rules": "^4.1.1",
-    "tslint-react": "^3.2.0",
     "typescript": "^2.9.1"
   },
   "license": "MIT"
